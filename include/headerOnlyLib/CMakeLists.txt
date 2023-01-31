@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.9)
+project(cmake_template_headerOnlyLib)
+
+add_library(cmake_template_headerOnlyLib INTERFACE)
+add_library(cmake_template::headerOnlyLib ALIAS cmake_template_headerOnlyLib)
+
+target_compile_features(cmake_template_headerOnlyLib INTERFACE cxx_std_17)
+target_include_directories(cmake_template_headerOnlyLib INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/include/headerOnlyLib/)
